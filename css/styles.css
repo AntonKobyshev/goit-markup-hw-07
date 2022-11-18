@@ -59,23 +59,6 @@ p {
   padding: 0;
   margin: 0;
 }
-/* Хедер */
-
-.header {
-  border-bottom: 1px solid var(--border-color);
-}
-header .logo {
-  color: var(--accent-color);
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-}
-
-header .studio-in-logo {
-  color: #000000;
-}
 
 .container {
   margin-left: auto;
@@ -84,29 +67,54 @@ header .studio-in-logo {
   padding-right: 15px;
   width: 1200px;
   text-align: center;
-  /* outline: 2px solid var(--accent-color); */
+
 }
 
-/* Site nav */
+/* Хедер */
 
-.site-nav {
+.header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo__studio {
+  color: #000000;
+}
+
+
+.nav {
   display: flex;
   align-items: center;
 }
-.site-nav-list {
+
+.nav__list {
   display: flex;
   margin-left: 93px;
 }
 
-.site-nav .item-nav:not(:last-child) {
+.nav__list__header
+{
+
+  margin-left: 93px;
+}
+
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav-list .link {
+.nav__link {
   position: relative;
 }
 
-.site-nav-list .current::after {
+.nav__link--current::after {
   content: '';
 
   position: absolute;
@@ -120,7 +128,7 @@ header .studio-in-logo {
   border-radius: 2px;
 }
 
-.site-nav .link {
+.nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -133,26 +141,21 @@ header .studio-in-logo {
   transition: color 250ms var(--timing-function);
 }
 
-.site-nav .link.current {
+.nav__link--current {
   color: var(--accent-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-color);
 }
-.contacts-header-list {
+
+.contacts {
   display: flex;
   margin-left: auto;
 }
-/* .contacts-header-list > .item {
-  align-items: center;
-} */
-/* .contacts-header-list .item + .item {
-  margin-left: 0px;
-} */
 
-.contacts-header {
+.contacts__link {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -164,14 +167,19 @@ header .studio-in-logo {
 
   transition: color 250ms var(--timing-function);
 }
-.contacts-header:hover,
-.contacts-header:focus {
+
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.envelope,
-.smartphone {
+.contacts__envelope-icon,
+.contacts__smartphone-icon {
   margin-right: 10px;
 }
 
@@ -187,7 +195,7 @@ header .studio-in-logo {
   margin-right: auto;
 }
 
-.hero-title {
+.hero__title {
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
@@ -204,7 +212,7 @@ header .studio-in-logo {
 
 /* buttons */
 
-.button-main {
+.button__main {
   color: var(--white-color);
   background-color: var(--accent-color);
   font-family: inherit;
@@ -221,11 +229,11 @@ header .studio-in-logo {
 
   transition: background-color 250ms var(--timing-function);
 }
-.button-main:hover,
-.button-main:focus {
+.button__main:hover,
+.button__main:focus {
   background-color: var(--button-main-active-color);
 }
-
+/* tyt */
 .buttons {
   display: flex;
   justify-content: center;

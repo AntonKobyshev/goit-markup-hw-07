@@ -1,5 +1,5 @@
 .command {
-  @extend %section;
+  @include section;
   background-color: var(--section-comand-bg-color);
 }
 
